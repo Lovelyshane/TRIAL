@@ -1,0 +1,165 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <title> PEBBLES IN ROMBLON </title>
+</head>
+<body>
+    <div id="logreg-forms">
+        <form class="form-signin">
+            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
+            <p style="text-align:center"> LOGIN </p>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <a href="index1.html">
+            <button class="btn btn-success btn-block" type="submit" id="loginbtn"><i class="fas fa-sign-in-alt"> </i> Sign in</button>
+            <hr>
+            <!-- <p>Don't have an account!</p>  -->
+            <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
+            </form>
+
+            <form action="/reset/password/" class="form-reset">
+                <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
+                <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
+            </form>
+            
+            <form action="#" class="form-signup">
+                
+                <p style="text-align:center">SIGN UP</p>
+
+                <input type="email" id="useremail" class="form-control" placeholder="Email address" required autofocus="">
+                <input type="password" id="userpass" class="form-control" placeholder="Password" required autofocus="">
+
+                <button class="btn btn-primary btn-block" type="button" id="signupbtn"><i class="fas fa-user-plus"></i> Sign Up</button>
+                <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+            </form>
+            <br>
+            
+    </div>
+    <script>
+function toggleResetPswd(e){
+     e.preventDefault();
+    $('#logreg-forms .form-signin').toggle() // display:block or none
+    $('#logreg-forms .form-reset').toggle() // display:block or none
+}
+
+function toggleSignUp(e){
+    e.preventDefault();
+    $('#logreg-forms .form-signin').toggle(); // display:block or none
+    $('#logreg-forms .form-signup').toggle(); // display:block or none
+}
+
+$(()=>{
+    // Login Register Form
+    $('#logreg-forms #forgot_pswd').click(toggleResetPswd);
+    $('#logreg-forms #cancel_reset').click(toggleResetPswd);
+    $('#logreg-forms #btn-signup').click(toggleSignUp);
+    $('#logreg-forms #cancel_signup').click(toggleSignUp);
+});
+</script>
+    </p>
+
+    <!-- GUIDE LIST -->
+    <div class="container" style="margin-top: 40px;">
+        <ul class="collapsible z-depth-0 guides" style="border: none;"></ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDs-6VN11Iav8TBo3dSs_NulaQsQmjiqMo",
+    authDomain: "romblonpebbles.firebaseapp.com",
+    projectId: "romblonpebbles",
+    storageBucket: "romblonpebbles.appspot.com",
+    messagingSenderId: "620100154828",
+    appId: "1:620100154828:web:71ba3caf9f4425693ad969",
+    measurementId: "G-ELR8JCKSMZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  var signupbtn=document.getElementById("signupbtn")
+  var fullnamesignup=document.getElementById("username")
+  var emailsignup=document.getElementById("useremail")
+  var passwordsignup=document.getElementById("userpass")
+
+  signupbtn.onclick=function()
+      {
+    signupbtn.textContent="Registering Your Account! Please wait";
+firebase.auth().createUserWithEmailAndPassword(emailsignup.value, passwordsignup.value).then(function(response){
+   
+    console.log(response);
+    signupbtn.disabled=false;
+    signupbtn.textContent="You can now sign in";
+})
+
+    .catch(function(error){
+    signupbtn.disabled=false;
+   signupbtn.textContent="Please check your data";
+        console.log(error);
+    })
+      }
+
+//END SIGN UP WITH EMAIL AND PASSWORD
+
+// START WITH EMAIL AND PASSWORD LOGIN
+
+var loginemail=document.getElementById("inputEmail");
+var loginpassword=document.getElementById("inputPassword");
+var loginbtn=document.getElementById("loginbtn");
+
+
+loginbtn.onclick=function()
+{
+    loginbtn.disabled=true;
+    loginbtn.textContent="Logging Please wait";
+    firebase.auth().signInWithEmailAndPassword(loginemail.value, loginpassword.value).then(function(response){
+
+    console.log(response);
+    loginbtn.disabled=false;
+    loginbtn.textContent="Sign In";
+
+    })
+    .catch(function(error){
+        console.log(error);
+        loginbtn.disabled=false;
+    loginbtn.textContent="Sign In"
+    })
+}
+
+// make auth and firebase references
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+
+
+
+</script>
+
+<script type="firebase/auth.js"></script>
+<script type="firebase/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>Romblon Decorative Pebbles</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/logo.jpg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+  
+      <!-- NAVBAR -->
+      <nav class="z-depth-0 black">
+        <div class="nav-wrapper container">
+    
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="logged-in" style="display: none;">
+                <a href="#" class="white-text modal-trigger" data-target="modal-account">ACCOUNT DETAILS</a>
+              </li>
+              <li class="logged-in" style="display: none;">
+                <a href="about.html" class="white-text modal-trigger"> ABOUT US </a>
+              </li>
+              <li class="logged-in" style="display: none;">
+                <a href="location.html" class="white-text modal-trigger"> LOCATION </a>
+              </li>
+              <li class="logged-in" style="display: none;">
+                <a href="product.html" class="white-text modal-trigger"> BUY </a>
+              </li>
+              <li class="logged-in" style="display: none;">
+                <a href="shop-detail.html" class="white-text modal-trigger"> SEARCH </a>
+              </li>
+              <li class="logged-in" style="display: none;">
+                <a href="#" class="white-text" id="logout">LOGOUT</a>
+              </li>
+           
+              <li class="logged-out" style="display: none;">
+                <a href="#" class="white-text modal-trigger" data-target="modal-login">LOGIN</a>
+              </li>
+              <li class="logged-out" style="display: none;">
+                <a href="#" class="white-text modal-trigger" data-target="modal-signup">SIGN UP</a>
+              </li>
+           
+            </span>
+          </ul>
+        </div>
+      </nav>
+    
+      <!-- end of nav bar -->
+
+    <!-- Start Top Search -->
+    <div class="top-search">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search for an item" spellcheck="false" value="">
+                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Search -->
+
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>OUR LOCATION </h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                        <li class="breadcrumb-item active">My Account</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+
+    <!-- Start My Account  -->
+      <div class="about-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner-frame"> <img class="img-fluid" src="images/location.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="noo-sh-title-top"> <span>OUR LOCATION</span></h2>
+                    <p> <Br><br>
+Agbaliga Small scale Mining cooperative<BR>
+Brgy. Agpanabat Sitio Agbaliga Romblon, Romblon 5500
+
+
+
+                     </p>   
+                </div>
+                             </div>
+            </div>
+        </div>
+    </div>
+    <!-- End My Account -->
+
+
+
+
+ <!-- SIGN UP MODAL -->
+ <div id="modal-signup" class="modal">
+  <div class="modal-content">
+    <h4>Sign up</h4><br />
+    <form id="signup-form">
+      <div class="input-field">
+        <input type="email" id="signup-email" required />
+        <label for="signup-email">Email address</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="signup-password" required />
+        <label for="signup-password">Choose password</label>
+      </div>
+      <div class="input-field">
+        <input type="text" id="signup-bio" required />
+        <label for="signup-bio">FULL NAME (Surename, Firstname, Middlename)</label>
+      </div>
+      <div class="input-field">
+          <input type="text" id="signup-bio1" required />
+          <label for="signup-bio1">ADDRESS (House no. Street, Barangay, City, Province, Postal Code)</label>
+        </div>
+      <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+    </form>
+  </div>
+</div>
+
+<!-- LOGIN MODAL -->
+<div id="modal-login" class="modal">
+  <div class="modal-content">
+    <h4>Login</h4><br />
+    <form id="login-form">
+      <div class="input-field">
+        <input type="email" id="login-email" required />
+        <label for="login-email">Email address</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="login-password" required />
+        <label for="login-password">Your password</label>
+      </div>
+      <button class="btn yellow darken-2 z-depth-0">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- ACCOUNT MODAL -->
+<div id="modal-account" class="modal">
+  <div class="modal-content center-align">
+    <h4>Account details</h4><br />
+    <div class="account-details"></div>
+  </div>
+</div>
+
+<!-- CREATE GUIDE MODAL -->
+<div id="modal-create" class="modal">
+  <div class="modal-content">
+    <h4>Create Guide</h4><br />
+    <form id="create-form">
+      <div class="input-field">
+        <input type="text" id="title" required>
+        <label for="title">Guide Title</label>
+      </div>
+      <div class="input-field">
+        <textarea id="content" class="materialize-textarea" required></textarea>
+        <label for="content">Guide Content</label>
+      </div>
+      <button class="btn yellow darken-2 z-depth-0">Create</button>
+    </form>
+  </div>
+</div>
+
+<!-- GUIDE LIST -->
+<div class="container" style="margin-top: 40px;">
+  <ul class="collapsible z-depth-0 guides" style="border: none;">
+
+  </ul>
+</div>
+
+
+
+
+
+     <!-- Start Instagram Feed  -->
+     <div class="instagram-box">
+        <div class="main-instagram owl-carousel owl-theme">
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="img/loc1.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><img src="images/instagram-img-06.jpg" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="img/loc2.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><img src="images/instagram-img-01.jpg" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="img/loc4.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><img src="images/instagram-img-02.jpg" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="img/loc7.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><img src="images/instagram-img-03.jpg"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="img/loc8.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><img src="images/instagram-img-04.jpg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Instagram Feed  -->
+
+
+
+    <!-- Start Footer  -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+            
+                <hr>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-widget">
+                            <h4>About Decorative Pebbles</h4>
+                            <p>Beach and mountain pebbles are also used to create water-smart gardens in areas where water is not abundant. Small pebbles are also used to create living spaces and gardens on the rooftops of buildings. </p> 
+                            <p>Indoors, pebbles can be used as bookends and paperweights. Large pebbles are also used to create "pet rocks" for children. </p>                          
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link-contact">
+                            <h4>Contact Us</h4>
+                            <ul>
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: Romblon, Romblon Philippines </p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+63 929-614-2343</a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">lapura.grace@gmail.com</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Business Time</h3>
+                            <ul class="list-time">
+                                <li>Monday - Friday: 08:00am to 05:00pm</li> <li>Saturday: 10:00am to 08:00pm</li> <li>Sunday: <span>Open</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+                <hr>
+            </div>
+         
+        </div>
+       
+    </footer>
+    <!-- End Footer  -->
+
+     <!-- Start copyright  -->
+     <div class="footer-copyright">
+        <p class="footer-company">All Rights Reserved. &copy; 2021 <a href="#">Romblon Decorative Pebbles</a> Design By :
+            <a href="#">COEN 3463 TEAM 10</a></p>
+    </div>
+    <!-- End copyright  -->
+
+ 
+
+  
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBEdBSiI16c5oBis9UJqwVwxG8ju6T9GNI",
+    authDomain: "pebblesinromblon-9ac98.firebaseapp.com",
+    projectId: "pebblesinromblon-9ac98",
+    storageBucket: "pebblesinromblon-9ac98.appspot.com",
+    messagingSenderId: "1015109450442",
+    appId: "1:1015109450442:web:54c52aa6a1179720439233",
+    measurementId: "G-2JXRT0Q89G"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // update firestore settings
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/index.js"></script>
+  <!-- ALL JS FILES -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- ALL PLUGINS -->
+  <script src="js/jquery.superslides.min.js"></script>
+  <script src="js/bootstrap-select.js"></script>
+  <script src="js/inewsticker.js"></script>
+  <script src="js/bootsnav.js."></script>
+  <script src="js/images-loded.min.js"></script>
+  <script src="js/isotope.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/baguetteBox.min.js"></script>
+  <script src="js/form-validator.min.js"></script>
+  <script src="js/contact-form-script.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
+      
